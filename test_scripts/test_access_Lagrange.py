@@ -9,7 +9,7 @@ from qiskit import QuantumCircuit
 from qiskit import transpile
 
 # This points to the folder containing this file
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 TOKEN_PATH = BASE_DIR / 'tokens.json'
 
 # Extract the api token
