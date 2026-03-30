@@ -12,12 +12,12 @@ if(len(sys.argv) != 3):
     exit()
 renamed_json = 0 
 
-if(not(Path.exists(CIRCUIT_FOLDER / (sys.argv[1] + ".qpy")))):
+if(not(Path.exists(CIRCUIT_FOLDER / (sys.argv[1] + ".qasm")))):
     print("Cannot rename, circuit not found.\n\nAvailable list of circuits:" )
     for filename in os.listdir(CIRCUIT_FOLDER):
         print(filename.split(".")[0])
     exit()
-os.rename(CIRCUIT_FOLDER / (sys.argv[1] + ".qpy" ), CIRCUIT_FOLDER / (sys.argv[2] + ".qpy"))
+os.rename(CIRCUIT_FOLDER / (sys.argv[1] + ".qasm" ), CIRCUIT_FOLDER / (sys.argv[2] + ".qasm"))
 
 for filename in os.listdir(DATA_DIR):
     data = {}

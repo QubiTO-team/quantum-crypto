@@ -7,6 +7,7 @@ requires-python = ">=3.11"
 dependencies = [
     "annotated-types==0.7.0",
     "asttokens==3.0.1",
+    "bitarray==3.8.0",
     "certifi==2026.2.25",
     "charset-normalizer==3.4.5",
     "click==8.3.1",
@@ -49,6 +50,7 @@ dependencies = [
     "mpmath==1.3.0",
     "nest-asyncio==1.6.0",
     "networkx==3.6.1",
+    "nistrng==1.2.3",
     "numba==0.64.0",
     "numpy==2.4.3",
     "numpy-typing-compat==20251206.2.4",
@@ -85,6 +87,7 @@ dependencies = [
     "pyzmq==27.1.0",
     "qiskit==2.1.2",
     "qiskit-aer==0.17.2",
+    "qiskit-qasm3-import>=0.6.0",
     "qrisp==0.8.0",
     "requests==2.32.3",
     "ruamel-yaml==0.17.32",

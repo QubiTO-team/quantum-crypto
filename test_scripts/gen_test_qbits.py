@@ -4,7 +4,7 @@ import sys
 # To connect to Lagrange
 from iqm.qiskit_iqm import IQMProvider
 # To build the test circuit from qiskit import QuantumCircuit from qiskit import transpile
-from qiskit import QuantumCircuit, transpile, qpy
+from qiskit import QuantumCircuit, transpile, qasm3
 import subprocess
 import os
 from bitarray import bitarray
@@ -39,8 +39,7 @@ provider = IQMProvider(iqm_url, quantum_computer=quantum_computer, token = api_t
 backend = provider.get_backend()
 # Build a test circuit and transpile it
 circuit = QuantumCircuit(1)
-with open(CIRCUIT_FOLDER / (sys.argv[2] + ".qpy"), "rb") as file:
-    circuit = qpy.load(file)[0]
+circuit = qasm3.load(CIRCUIT_FOLDER / (sys.argv[2] + ".qasm"))
 transpiled_circuit = transpile(circuit, backend=backend)
 
 # Send the circuit to Lagrange
